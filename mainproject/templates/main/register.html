@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form elements</title>
+</head>
+<body style="background-color:#A9A9A9">
+{% load static %}
+<style>
+.container:hover {
+  box-shadow: 0 10px 16px 0 lightblue;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height:500px;
+  width:650px;
+  box-shadow: 0 4px 8px 0 #ffc0cb ;
+  transition: 0.3s;
+  padding: 50px 20px;
+  background-image:url({% static 'image/mainpro/reg.jpg'%});
+  background-size: cover;
+  font-size:20px;
+  font-weight:bold;
+  color:#464646;
+  border-radius: 15px 50px;
+
+}
+.p{
+border-top-left-radius:3px;
+border-top-right-radius:3px;
+border-bottom-left-radius:3px;
+border-bottom-right-radius:3px;
+width:60%;
+height:20px;
+}
+ #p2{
+    position: absolute;
+    bottom: 8px;
+    left: 10%;
+    width: 80%;
+    }
+.p1{
+border-top-left-radius:2px;
+border-top-right-radius:3px;
+border-bottom-left-radius:3px;
+border-bottom-right-radius:2px;
+border :2px solid gray;
+width:130px;
+height:25px;
+background-color:gray;
+}
+.ca{
+  display: flex;
+  justify-content: center;
+}
+</style>
+<h1 style="color:#7cfc00 "><center>REGISTRATION</center></h1>
+<div class="ca">
+  <div class="container">
+
+    <form style="width:80%;"method="POST"  >
+    {% csrf_token %}
+        <div class="cont">
+        <div ><br><br><br><br><br>
+    <label for="n">Name : </label><input class="p" type="text" id="n" name="name" placeholder="Enter your name" value="" required><br><br>
+    <label for="m">Eamil  : </label><input type="email" id="m" name="email" class="p" placeholder="Enter your mailid" value="" required><br><br>
+            <label for="ph">Phone number  : </label><input type="number" id="ph" name="phno" class="p" placeholder="Phone number" value="" required><br><br>
+    <label for="pass">Password  : </label><input type="password" id="pass" class="p" name="passw" placeholder="password" value="" required><br><br>
+    <label for="Cp">Confirm Password : </label><input type="password" class="p" id="Cp" name="passw1" placeholder="confirm Password" value="" required><br><br>
+        <br><center><input class="p1" type="submit" value="Register"></center>
+            </div>
+            </div>
+</form>
+           <p id="p2"><a href="/Home/"><b>Home</b></a></p>
+
+  </div>
+    </div>
+</body>
+</html>

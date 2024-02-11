@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1c0ad49dd1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="majorpro.css">
+    <title>Gradient Website</title>
+</head>
+<style>
+    .col{
+        padding-top:50px;
+        transition: all ease-in-out 0.5s;
+
+    }
+
+    .flex-end{
+    display:flex;
+    padding:10px 0;
+
+    }
+    #b1:hover{
+    box-shadow: 5px 5px 6px #e6e8fa  ;
+    }
+    #b2:hover{
+    box-shadow: 5px 5px 6px #e6e8fa ;}
+    #n1:hover{
+    transform: scale(1.01);
+    box-shadow: 5px 5px 6px hot pink;
+    }
+    #n2:hover{
+    transform: scale(1.01);
+    shadow: 5px 5px 6px hot pink;
+    }
+    #n3:hover{
+    transform: scale(1.01);
+    box-shadow: 5px 5px 6px hot pink;
+    }
+    .col:hover{
+        transform: scale(1.05);
+    }
+    .card{
+        box-shadow: 5px 5px 6px rgb(232, 143, 227);
+    }
+    #na{
+        box-shadow: 6px 5px 6px white;
+        background-color: #D1A1D6;
+    }
+
+</style>
+<body>
+
+
+  <nav class="navbar navbar-light" style="background-color: #7e0ca1;">
+
+      <a class="navbar-brand" href="#">
+        <img
+          src="{% static 'image/mainpro/logo.jpg'%}"
+          height="50"
+          width="50"
+        /><p style="color: #db0aad;"><b>RMGRADIENTS</b></p>
+      </a>
+      <a><div>
+
+          <button id="b3" class="btn btn-primary rounded" onclick="face()" style="background-color:#4267B2; width=100%;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg>  Share on Facebook </button>
+          <button id="b4" class="btn btn-primary rounded" onclick="twi()" style="background-color:#1DA1F2; width=250%;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+</svg>  Share on Twitter</button>
+          </div></a>
+
+
+    <button class="navbar-toggler" type="button"  id="na" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+          <li><div>
+             <a href="/register/"> <button id="b1" class="btn btn-primary rounded" style="background-color:#dda0dd">Register</button></a>
+          <a href="/login/"> <button id="b2" class="btn btn-primary rounded" style="background-color:#dda0dd">Login</button></a>
+          </div></li>
+        <li class="nav-item active" id="n1">
+          <a class="nav-link" href="/multi/">Multi-color Gradients <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" id="n2">
+          <a class="nav-link" href="/bright/">Bright Gradients</a>
+        </li>
+        <li class="nav-item" id="n3">
+          <a class="nav-link" href="/premium/">Premium Gradients</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <center><h1 style="color:#ed04d6;" ><b><i>Gradients</i></b></h1></center>
+    <div class="container">
+
+<div class="row">
+     <span class="col">
+        <div class="card" id="Gradient_1" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradientone">
+            <div style="height:200px; width:100%; background-image:linear-gradient(pink, aqua,#16E2F5);"></div>
+            <div class="card-body">
+              <p class="card-text">Cool aqua-pink combo</p>
+            </div>
+          </div>
+     </span>
+     <span class="col">
+        <div class="card" id="Gradient_2" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradienttwo">
+            <div style="height:200px; width:100%; background-image:linear-gradient(#fb9f8b,#077b88,#e2ccc6,#6bb6bc,#9dc6ca);"></div>
+            <div class="card-body">
+              <p class="card-text">Sacramento State Green-Lumber</p>
+            </div>
+          </div>
+     </span>
+     <span class="col">
+        <div class="card" id="Gradient_3" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient3">
+            <div style="height:200px; width:100%; background-image:linear-gradient(#766dc1,#9f81cd,#ebb2d6,#f198af,#fbd1d3);"></div>
+            <div class="card-body">
+              <p class="card-text">Blue voilet-pale voilet pink</p>
+            </div>
+          </div>
+     </span>
+     <span class="col">
+        <div class="card" id="Gradient_4" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient4">
+            <div style="height:200px; width:100%; background-image:linear-gradient(#FFDDAA,#FFDDAA,white);"></div>
+            <div class="card-body">
+              <p class="card-text">Moccasin</p>
+            </div>
+          </div>
+     </span>
+     <span class="col">
+        <div class="card" id="Gradient_5" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient5">
+            <div style="height:200px; width:100%; background-image:linear-gradient(#801818,white,#801818);"></div>
+            <div class="card-body">
+              <p class="card-text">Maroon</p>
+            </div>
+          </div>
+     </span>
+     <span class="col">
+        <div class="card" id="Gradient_6" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient6">
+            <div style="height:200px; width:100%; background-image:linear-gradient(white,#DF00FF,#DF00FF);"></div>
+            <div class="card-body">
+              <p class="card-text">Electric Purple</p>
+            </div>
+          </div>
+     </span>
+
+
+</div>
+<div class="row">
+    <span class="col">
+       <div class="card" id="Gradient_7" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient7">
+           <div style="height:200px; width:100%; background-image:linear-gradient(#00FFFF,#00FFFF,#7FFFD4,#E0FFFF);"></div>
+           <div class="card-body">
+             <p class="card-text">Aqua-light green</p>
+           </div>
+         </div>
+    </span>
+    <span class="col">
+       <div class="card" id="Gradient_8" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradienteight">
+           <div style="height:200px; width:100%; background-image:linear-gradient(#FFFF00,#FFD700,#FAFAD2,#FFFFE0);"></div>
+           <div class="card-body">
+             <p class="card-text">Golden-yellow</p>
+           </div>
+         </div>
+    </span>
+    <span class="col">
+       <div class="card" id="Gradient_9" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient9">
+           <div style="height:200px; width:100%; background-image:linear-gradient(to right,#FFA07A,#E9967A,#DC143C);"></div>
+           <div class="card-body">
+             <p class="card-text">Spanish Red</p>
+           </div>
+         </div>
+    </span>
+    <span class="col">
+       <div class="card" id="Gradient_10" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient10">
+           <div style="height:200px; width:100%; background-image:linear-gradient(to right,#42275a ,#734b6d);"></div>
+           <div class="card-body">
+             <p class="card-text">Rebecca Purple</p>
+           </div>
+         </div>
+    </span>
+    <span class="col">
+        <div class="card"  id="Gradient_11" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient11">
+            <div style="height:200px; width:100%; background-image:linear-gradient(to left,#56ab2f,#a8e063);"></div>
+            <div class="card-body">
+              <p class="card-text">Light-Green</p>
+            </div>
+          </div>
+     </span>
+     <span class="col">
+        <div class="card" id="Gradient_12" style="width: 18rem; cursor: pointer;" data-toggle="modal" data-target="#gradient12">
+            <div style="height:200px; width:100%; background-image:linear-gradient(to left,#aa076b, #61045f);"></div>
+            <div class="card-body">
+              <p class="card-text">Pansy Purple</p>
+            </div>
+          </div>
+     </span>
+</div>
+</div> <!--this is container div end-->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="gradientone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cool aqua-pink combo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(pink, aqua,#16E2F5);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradientoneoutput">background-image:linear-gradient(pink, aqua,#16E2F5);background-image:linear-gradient(pink, aqua,#16E2F5);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer" onclick="gradientonefunc()"></i><small id="outputone"></small></p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Modal -->
+   <div class="modal fade" id="gradienttwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sacramento State Green-Lumber</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(#fb9f8b,#077b88,#e2ccc6,#6bb6bc,#9dc6ca);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradienttwooutput">background-image:linear-gradient(#fb9f8b,#077b88,#e2ccc6,#6bb6bc,#9dc6ca);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradienttwofunc()"></i><small id="outputtwo"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Blue voilet-pale voilet pink</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(#766dc1,#9f81cd,#ebb2d6,#f198af,#fbd1d3);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient3output">background-image:linear-gradient(#766dc1,#9f81cd,#ebb2d6,#f198af,#fbd1d3);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient3func()"></i><small id="output3"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Moccasin</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(#FFDDAA,#FFDDAA,white);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient4output">background-image:linear-gradient(#FFDDAA,#FFDDAA,white);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient4func()"></i><small id="output4"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Maroon</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(#801818,white,#801818);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient5output">background-image:linear-gradient(#801818,white,#801818);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient5func()"></i><small id="output5"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Electric Purple</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(white,#DF00FF,#DF00FF);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient6output">background-image:linear-gradient(white,#DF00FF,#DF00FF);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient6func()"></i><small id="output6"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Aqua-light green</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(#00FFFF,#00FFFF,#7FFFD4,#E0FFFF);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient7output">background-image:linear-gradient(#00FFFF,#00FFFF,#7FFFD4,#E0FFFF);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient7func()"></i><small id="output7"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradienteight" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Golden-yellow</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(#FFFF00,#FFD700,#FAFAD2,#FFFFE0);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradienteightoutput">background-image:linear-gradient(#FFFF00,#FFD700,#FAFAD2,#FFFFE0);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradienteightfunc()"></i><small id="outputeight"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Spanish Red</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(to right,#FFA07A,#E9967A,#DC143C);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient9output">background-image:linear-gradient(to right,#FFA07A,#E9967A,#DC143C);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient9func()"></i><small id="output9"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Rebecca Purple</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(to right,#42275a ,#734b6d);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient10output">background-image:linear-gradient(to right,#42275a ,#734b6d);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient10func()"></i><small id="output10"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pansy Purple</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(to left,#56ab2f,#a8e063);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient11output">background-image:linear-gradient(to left,#56ab2f,#a8e063);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient11func()"></i><small id="output11"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gradient12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pansy Purple</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="height:350px; width:100%; background-image:linear-gradient(to left,#aa076b, #61045f);"></div>
+        </div>
+        <div class="modal-footer">
+            <p><code id="gradient12output">background-image:linear-gradient(to left,#aa076b, #61045f);</code>
+                <i class="fa-solid fa-copy" style="cursor:pointer;" onclick="gradient12func()"></i><small id="output12"></small>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+    function gradientonefunc(){
+        var grdone=document.getElementById("gradientoneoutput");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("outputone").textContent="  Copied !";
+    }
+    function gradienttwofunc(){
+        var grdtwo=document.getElementById("gradienttwooutput");
+        navigator.clipboard.writeText(grdtwo.textContent);
+        document.getElementById("outputtwo").textContent="  Copied !";
+    }
+    function gradient3func(){
+        var grdone=document.getElementById("gradient3output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output3").textContent="  Copied !";
+    }
+    function gradient4func(){
+        var grdone=document.getElementById("gradient4output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output4").textContent="  Copied !";
+    }
+    function gradient5func(){
+        var grdone=document.getElementById("gradient5output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output5").textContent="  Copied !";
+    }
+    function gradient6func(){
+        var grdone=document.getElementById("gradient6output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output6").textContent="  Copied !";
+    }
+    function gradient7func(){
+        var grdone=document.getElementById("gradient7output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output7").textContent="  Copied !";
+    }
+    function gradienteightfunc(){
+        var grdone=document.getElementById("gradienteightoutput");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("outputeight").textContent="  Copied !";
+    }
+    function gradient9func(){
+        var grdone=document.getElementById("gradient9output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output9").textContent="  Copied !";
+    }
+    function gradient10func(){
+        var grdone=document.getElementById("gradient10output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output10").textContent="  Copied !";
+    }
+    function gradient11func(){
+        var grdone=document.getElementById("gradient11output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output11").textContent="  Copied !";
+    }
+    function gradient12func(){
+        var grdone=document.getElementById("gradient12output");
+        navigator.clipboard.writeText(grdone.textContent);
+        document.getElementById("output12").textContent="  Copied !";
+    }
+
+    function searchf(){
+        var inp=document.getElementById(sear).value
+        var arr=[Gradient_1,Gradient_2,Gradient_3,Gradient_4,Gradient_5,Gradient_6,Gradient_7,Gradient_8,
+        Gradient_9,Gradient_10,Gradient_11,Gradient_12]
+        for (let x in arr){
+          if(arr[x]==inp){
+
+          }
+        }
+    }
+    function face(){
+    window.open("https://www.facebook.com/","_blank")
+    }
+    function twi(){
+    window.open("https://twitter.com/i/flow/login","_blank")
+    }
+</script>
+<br>
+
+<footer class="page-footer font-small blue">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <!-- Form -->
+        <form class="form-inline">
+          <input class="form-control form-control-sm mr-3 w-75" type="search" placeholder="Search"
+            aria-label="Search"  id="sear">
+          <button class="btn btn-outline-info" type="send" onclick="searchf()"><i class="fas fa-search" aria-hidden="true"></i></button>
+        </form>
+        <!-- Form -->
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <div class="footer-copyright text-center py-3">© 2024 Copyright:
+    <a href="C:\Users\R.PADMAVATHI\visualstudiocodeprograms\New folder\Copyright Licensesample.pdf">RMGRADIENTS</a>
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
